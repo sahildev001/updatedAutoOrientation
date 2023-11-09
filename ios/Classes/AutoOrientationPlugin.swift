@@ -26,8 +26,10 @@ public class AutoOrientationPlugin: NSObject, FlutterPlugin {
             else { return }
         let resolvedMask: UIInterfaceOrientationMask
         switch call.method {
-        case "setLandscapeRight", "setLandscapeAuto":
+        case "setLandscapeRight":
             resolvedMask = UIInterfaceOrientationMask.landscapeRight
+        case "setLandscapeAuto":
+            resolvedMask =  UIInterfaceOrientationMask.landscape
         case "setLandscapeLeft":
             resolvedMask = UIInterfaceOrientationMask.landscapeLeft
         case "setPortraitUp", "setPortraitAuto":
